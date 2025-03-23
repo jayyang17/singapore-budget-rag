@@ -29,9 +29,6 @@ It extracts content from the PDFs, chunks and embeds the data using OpenAI Embed
 
 ---
 
-
----
-
 ## Sample Answer and Reference Traceability
 
 **Question**: *"What percentage of Singapore’s GDP is spent by the government according to FY2025?"*
@@ -43,27 +40,6 @@ The documents do not directly specify the percentage of GDP that the Singapore g
 
 - `fy2025_budget_statement.pdf` | Introduction | Page 3  
 - `fy2025_budget_statement.pdf` | Conclusion | Page 94  
-
----
-
-## Limitations
-
-- Only supports **FY2024 and FY2025** hardcoded in the logic.
-- Prompt templates and LLM config are not yet parameterized.
-- No YAML-based config manager (all config is defined inline).
-- POC does not include evaluation or retraining pipeline.
-- No front-end styling or production-grade deployment.
-
----
-
-## Future Improvements
-
-- Support additional years dynamically using metadata.
-- Externalize all prompt and retriever settings via `config.yaml`.
-- Add feedback loop for answer validation and continual embedding.
-- Switch to open-source embedding models (e.g. `Instructor`, `BGE`) for offline deployment.
-- Improve chunking strategy using sentence boundary detection or table-aware splitting.
-- CI/CD for ingestion and retraining pipeline.
 
 ---
 ## Screenshots
